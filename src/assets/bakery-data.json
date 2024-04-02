@@ -1,0 +1,195 @@
+[
+  {
+    "name": "Classic Cheeseburger",
+    "description": "A juicy beef patty topped with cheddar cheese, lettuce, tomato, onions, and pickles on a toasted bun.",
+    "ingredients": "beef patty, cheddar cheese, lettuce, tomato, onion, pickles, bun",
+    "allergens": "gluten, dairy",
+    "price": 9.99,
+    "rating": 92,
+    "numReviews": 150,
+    "containsGluten": true,
+    "isVegan": false,
+    "image": "images/classic_cheeseburger.png"
+    },
+    
+    {
+    "name": "Veggie Burger",
+    "description": "A hearty vegetable-based patty with avocado, lettuce, tomato, and vegan mayo on a whole wheat bun.",
+    "ingredients": "vegetable patty, avocado, lettuce, tomato, vegan mayo, whole wheat bun",
+    "allergens": ["gluten"],
+    "price": 11.99,
+    "rating": 89,
+    "numReviews": 75,
+    "containsGluten": true,
+    "isVegan": true,
+    "image": "images/veggie_burger.png"
+    },
+    {
+      "name": "BBQ Bacon Burger",
+      "description": "Beef patty with crispy bacon, onion rings, and BBQ sauce, served on a brioche bun.",
+      "ingredients": "Beef patty, bacon, onion rings, BBQ sauce, brioche bun",
+      "allergens": "Gluten, dairy, soy, egg",
+      "price": 12.99,
+      "rating": 94,
+      "numReviews": 100,
+      "containsGluten": true,
+      "isVegan": false,
+      "image": "images/bbq_bacon_burger.png"
+      },
+      
+      {
+      "name": "Chicken Sandwich",
+      "description": "Grilled chicken breast with lettuce, tomato, and honey mustard on a toasted bun.",
+      "ingredients": "Chicken breast, lettuce, tomato, honey mustard, bun",
+      "allergens": "Gluten, egg",
+      "price": 8.99,
+      "rating": 90,
+      "numReviews": 60,
+      "containsGluten": true,
+      "isVegan": false,
+      "image": "images/chicken_sandwich.png"
+      },
+      
+      {
+      "name": "Sweet Potato Fries",
+      "description": "Crispy sweet potato fries served with a side of spicy mayo dip.",
+      "ingredients": "Sweet potatoes, spicy mayo",
+      "allergens": "Egg",
+      "price": 4.99,
+      "rating": 88,
+      "numReviews": 120,
+      "containsGluten": false,
+      "isVegan": false,
+      "image": "images/sweet_potato_fries.png"
+      },
+      
+      {
+      "name": "Onion Rings",
+      "description": "Golden and crispy onion rings served with BBQ dipping sauce.",
+      "ingredients": "Onions, flour, breadcrumbs, BBQ sauce",
+      "allergens": "Gluten",
+      "price": 5.99,
+      "rating": 85,
+      "numReviews": 80,
+      "containsGluten": true,
+      "isVegan": false,
+      "image": "images/onion_rings.png"
+      },
+      
+      {
+      "name": "Milkshake",
+      "description": "Thick and creamy milkshake available in chocolate, vanilla, or strawberry.",
+      "ingredients": "Milk, ice cream, flavoring",
+      "allergens": "Dairy",
+      "price": 6.99,
+      "rating": 93,
+      "numReviews": 110,
+      "containsGluten": false,
+      "isVegan": false,
+      "image": "images/milkshake.png"
+      },
+      
+      {
+      "name": "Caesar Salad",
+      "description": "Crisp romaine lettuce, parmesan cheese, croutons, and Caesar dressing.",
+      "ingredients": "Romaine lettuce, parmesan cheese, croutons, Caesar dressing",
+      "allergens": "Gluten, dairy, fish, egg",
+      "price": 7.99,
+      "rating": 87,
+      "numReviews": 40,
+      "containsGluten": true,
+      "isVegan": false,
+      "image": "images/caesar_salad.png"
+      },
+      
+      {
+      "name": "Buffalo Wings",
+      "description": "Spicy buffalo wings served with celery sticks and blue cheese dressing.",
+      "ingredients": "Chicken wings, buffalo sauce, celery, blue cheese dressing",
+      "allergens": "Dairy",
+      "price": 9.99,
+      "rating": 91,
+      "numReviews": 130,
+      "containsGluten": false,
+      "isVegan": false,
+      "image": "images/buffalo_wings.png"
+      },
+      
+      {
+      "name": "Fish Tacos",
+      "description": "Grilled fish tacos with cabbage slaw, avocado, and a lime crema.",
+      "ingredients": "Fish, cabbage slaw, avocado, lime crema, taco shells",
+      "allergens": "Gluten, fish, dairy",
+      "price": 10.99,
+      "rating": 90,
+      "numReviews": 50,
+      "containsGluten": true,
+      "isVegan": false,
+      "image": "images/fish_tacos.png"
+      },
+      
+      {
+      "name": "Bacon Cheese Fries",
+      "description": "French fries topped with melted cheese and crispy bacon bits.",
+      "ingredients": "French fries, cheese, bacon bits",
+      "allergens": "Dairy",
+      "price": 7.99,
+      "rating": 88,
+      "numReviews": 95,
+      "containsGluten": false,
+      "isVegan": false,
+      "image": "images/bacon_cheese_fries.png"
+      },
+      
+      {
+      "name": "Mozzarella Sticks",
+      "description": "Fried mozzarella cheese sticks served with marinara dipping sauce.",
+      "ingredients": "Mozzarella cheese, breadcrumbs, marinara sauce",
+      "allergens": "Gluten, dairy",
+      "price": 6.99,
+      "rating": 86,
+      "numReviews": 70,
+      "containsGluten": true,
+      "isVegan": false,
+      "image": "images/mozzarella_sticks.png"
+      },
+      
+      {
+      "name": "Coleslaw",
+      "description": "Creamy coleslaw made with fresh cabbage and carrots.",
+      "ingredients": "Cabbage, carrots, mayonnaise",
+      "allergens": "Egg",
+      "price": 2.99,
+      "rating": 82,
+      "numReviews": 20,
+      "containsGluten": false,
+      "isVegan": false,
+      "image": "images/coleslaw.png"
+      },
+      
+      {
+      "name": "Chocolate Sundae",
+      "description": "Classic chocolate sundae with whipped cream, nuts, and a cherry on top.",
+      "ingredients": "Ice cream, chocolate syrup, whipped cream, nuts, cherry",
+      "allergens": "Dairy, nuts",
+      "price": 5.99,
+      "rating": 95,
+      "numReviews": 32,
+      "containsGluten": false,
+      "isVegan": false,
+      "image": "images/chocolate_sundae.png"
+      },
+      
+      {
+      "name": "Iced Tea",
+      "description": "Refreshing iced tea, brewed daily and served with lemon.",
+      "ingredients": "Tea, water, lemon",
+      "allergens": "None",
+      "price": 2.99,
+      "rating": 89,
+      "numReviews": 45,
+      "containsGluten": false,
+      "isVegan": true,
+      "image": "images/iced_tea.png"
+      }
+]

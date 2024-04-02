@@ -1,0 +1,186 @@
+body {
+  background-color: #304728 !important;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+.title {
+  margin-top: 0;
+  font-size: 5em;
+  padding-left: 1em;
+  padding-top: 1em;
+}
+
+.bakery-items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.BakeryItem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.BakeryItem h3 {
+  margin: 8px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+.BakeryItem p {
+  color: #666;
+  font-size: 0.9em;
+  padding-bottom: 1vw;
+}
+.add-to-cart-btn {
+  position: absolute; /* Position relative to its nearest positioned ancestor */
+  bottom: 16px; /* Distance from the bottom edge of the `.BakeryItem` */
+  right: 16px; /* Distance from the right edge of the `.BakeryItem` */
+  background-color: #333; /* Button background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Button padding */
+  margin: 0; /* Remove any default margin */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+.add-to-cart-btn:hover {
+  background-color: #1b1b1b; /* Darken the button on hover */
+}
+.BakeryItem {
+  position: relative; /* Continues to create a positioning context */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Helps push the footer content to the bottom */
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  width: 200px; /* Adjust width as necessary */
+  height: auto; /* Ensures the card can grow based on content */
+}
+.bakery-item-price {
+  position:relative; /* Position relative to `.BakeryItem` */
+  bottom: -15px; /* Distance from the bottom edge of the `.BakeryItem` */
+  display: flex;
+  left: 16px; /* Distance from the left edge of the `.BakeryItem` */
+  color: #333; /* Price text color */
+  font-weight: bold; /* Make the price text bold */
+}
+
+
+.cart-icon {
+  position: fixed; /* Keep the icon fixed during scrolling */
+  top: 0; /* Adjust this value if you want some spacing from the top edge */
+  right: 30px; /* Adjust this value if you want some spacing from the right edge */
+  background-color: #333; /* Background color of the icon */
+  color: white; /* Color of the text/icon */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1.5em; /* Size of the text/icon */
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 10px; /* Padding inside the cart icon for spacing */
+}
+.cart-icon img {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+}
+.cart-icon p {
+  position: absolute; /* Absolute positioning within .cart-icon */
+  top: -10px; /* Adjust to position the count */
+  right: -10px; /* Adjust to position the count */
+  background-color: #f44336; /* Example color */
+  color: white; /* Text color */
+  border-radius: 50%; /* Circular shape */
+  width: 20px; /* Adjust as needed */
+  height: 20px; /* Adjust as needed */
+  font-size: 0.75em; /* Adjust text size as needed */
+  display: flex; /* Align text center */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  padding: 0; /* Adjust padding as needed */
+}
+
+
+
+
+/* Cart style */
+.cart {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hide the cart completely off the right side */
+  width: 300px; /* Set this to the width of your cart */
+  height: 100%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+  z-index: 999;
+}
+.cart-visible {
+  right: 0; /* Slide in to be flush with the right edge of the screen */
+}
+.cart-buttons {
+  display: flex; /* Aligns buttons side by side */
+  justify-content:space-evenly; /* Spaces the buttons equally */
+  padding-top: 20px; /* Adds some space above the buttons */
+}
+.cart-button {
+  padding: 10px 20px; /* Add padding to the buttons */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change mouse cursor on hover */
+  margin: 0 10px; /* Add margin between buttons */
+}
+.reset-cart {
+  background-color: #f44336; /* Red color for reset button */
+  color: white; /* Text color */
+}
+.checkout-cart {
+  background-color: #4CAF50; /* Green color for checkout button */
+  color: white; /* Text color */
+}
+.removeItem {
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
+  vertical-align: middle; /* This will align the icon vertically with the text */
+  cursor: pointer; /* Changes the cursor to pointer when hovering over the icon */
+}
+.cart ul {
+  list-style-type: none; /* Removes the bullet points */
+  padding: 0; /* Removes the padding on the left side, if any */
+  margin: 0; /* Removes the margin, if you want a tighter list */
+}
+.cart li {
+  padding: 5px 0; /* Example padding for each item */
+  /* Add other styles as needed */
+}
+
+
+
+.menu-bar {
+  display: flex;
+  justify-content: center;
+  padding: 0.5em;
+}
+.menu-item {
+  background-color: #555; /* Menu item background color */
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px; /* Spacing between menu items */
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; /* Optional: rounds the corners of the buttons */
+}
+.menu-item:focus{
+  background-color: #aeaeae; 
+}
+.menu-item:hover {
+  background-color: #666; /* Slightly lighter on hover */
+}
