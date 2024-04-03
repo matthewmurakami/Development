@@ -164,6 +164,7 @@ function App() {
               value={sortBy}
               label="Sort By" // Ensure this matches the text of the corresponding InputLabel
               onChange={(e) => setSortBy(e.target.value)}
+              alt="Sort By" aria-hidden="false"
             >
               <MenuItem value="name">Name</MenuItem>
               <MenuItem value="price">Price</MenuItem>
