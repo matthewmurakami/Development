@@ -157,7 +157,7 @@ function App() {
               },
               '.MuiSvgIcon-root': { color: 'white' }, // Icon color
             }}>
-            <InputLabel id="sort-by-label" sx={{ "&.Mui-focused": { color: 'white' } }}>Sort By</InputLabel>
+            <InputLabel id="sort-by-label" sx={{ "&.Mui-focused": { color: 'white' } }} alt="Sort By" aria-hidden="false">Sort By</InputLabel>
             <Select
               labelId="sort-by-label"
               id="sort-by-select"
@@ -174,37 +174,14 @@ function App() {
           <FormControl 
             sx={{ 
               m: 1, minWidth: 120,
-              // Apply styles to the FormControl directly
-              '.MuiInputLabel-root': { 
-                // Default state (transparent label)
-                color: 'transparent',
-                // Ensure the label stays when the Select is focused
-                '&.Mui-focused': { 
-                  color: 'white',
-                },
-              },
-              '&:hover .MuiInputLabel-root': { 
-                // Label color on hover
-                color: 'white',
-              },
+              '.MuiInputLabel-root': { color: 'transparent','&.Mui-focused': { color: 'white',},},
+              '&:hover .MuiInputLabel-root': { color: 'white',},
               '& .MuiOutlinedInput-root': {
-                '&:hover .MuiOutlinedInput-notchedOutline': {
-                  // Border color on hover
-                  borderColor: 'white', 
-                },
-                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  // Border color on focus
-                  borderColor: 'white',
-                },
-                color: 'white', // Input text color
+                '&:hover .MuiOutlinedInput-notchedOutline': {borderColor: 'white', },
+                '&.Mui-focused .MuiOutlinedInput-notchedOutline': {borderColor: 'white',}, color: 'white',
               },
-              '.MuiSvgIcon-root': { 
-                color: 'white', // Icon color
-              },
-              // Directly target the focused state of the InputLabel within FormControl
-              '& .Mui-focused .MuiInputLabel-root': {
-                color: 'white', // Label color on focus
-              }
+              '.MuiSvgIcon-root': { color: 'white',},
+              '& .Mui-focused .MuiInputLabel-root': {color: 'white',}
             }}
           >
             
