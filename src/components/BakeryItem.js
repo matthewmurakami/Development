@@ -12,6 +12,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import Button from '@mui/material/Button';
+import NutritionImage from '../assets/nutrition2.png'
 
 const BakeryItem = ({ name, description, price, rating, numReviews, ingredients, allergens, image, addToCart }) => {
   const [openInfo, setOpenInfo] = useState(false);
@@ -63,6 +64,18 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
           <DialogContentText id="dialog-description">
             <b>Ingredients:</b> {ingredients}
           </DialogContentText>
+          {/* Add the image here */}
+          <CardMedia
+            component="img"
+            image={NutritionImage}
+            alt={`Image of ${name}`}
+            sx={{ 
+              maxWidth: '70%',
+              display:'block',
+              margin:'auto',
+              paddingTop:'20px'
+            }}
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleInfoClose}>Close</Button>

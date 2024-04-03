@@ -102,7 +102,7 @@ function App() {
   return (
     <Box sx={{ flexGrow: 1, backgroundColor:"#304728", paddingTop: '64px', paddingBottom: '64px' }}>
       <AppBar position="fixed">
-      <Toolbar sx={{ backgroundColor:"black", '& > *': { mx: 1 } }}> {/* This adds horizontal margin to each direct child */}
+      <Toolbar sx={{ backgroundColor: "black", '& > *': { mx: 1.2 } }}> {/* Increase the mx value */}
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
             GrillSpot
           </Typography>
