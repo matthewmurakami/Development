@@ -159,15 +159,16 @@ function App() {
             }}>
 
             <InputLabel 
-              id="sort-by-label" 
+              id="sort-by-button" 
               sx={{ "&.Mui-focused": { color: 'white' } }} 
               label="Sort By" 
-              aria-hidden="false">
+              aria-hidden="false"
+            >
                 Sort By
             </InputLabel>
 
             <Select
-              labelId="sort-by-label"
+              labelId="sort-by-button"
               id="sort-by-select"
               value={sortBy}
               label="Sort By" // Ensure this matches the text of the corresponding InputLabel
