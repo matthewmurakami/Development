@@ -157,7 +157,15 @@ function App() {
               },
               '.MuiSvgIcon-root': { color: 'white' }, // Icon color
             }}>
-            <InputLabel id="sort-by-label" sx={{ "&.Mui-focused": { color: 'white' } }} alt="Sort By" aria-hidden="false">Sort By</InputLabel>
+
+            <InputLabel 
+              id="sort-by-label" 
+              sx={{ "&.Mui-focused": { color: 'white' } }} 
+              label="Sort By" 
+              aria-hidden="false">
+                Sort By
+            </InputLabel>
+
             <Select
               labelId="sort-by-label"
               id="sort-by-select"
