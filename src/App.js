@@ -68,9 +68,11 @@ function App() {
     setFilterHighRating(false);
   }
 
-  function resetSort() {
+  function resetAll() {
     setSortBy('name');
     setSortOrder('asc');
+    setFilterFeatured(false);
+    setFilterHighRating(false);
   }
 
   const totalItemsInCart = Object.values(cart).reduce((acc, curr) => acc + curr, 0);
@@ -102,9 +104,9 @@ function App() {
   return (
     <Box sx={{ flexGrow: 1, backgroundColor:"#304728", paddingTop: '64px', paddingBottom: '64px' }}>
       <AppBar position="fixed">
-      <Toolbar sx={{ backgroundColor: "black", '& > *': { mx: 1.2 } }}> {/* Increase the mx value */}
+      <Toolbar sx={{ backgroundColor: "black"}}> 
           <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-            GrillSpot
+            <b>GrillSpot</b>
           </Typography>
           
           
@@ -114,7 +116,7 @@ function App() {
               color: filterFeatured ? "black" : "white",
             }}
             onClick={() => setFilterFeatured(!filterFeatured)}
-            sx={{border: 1}}
+            sx={{border: 1, mx: 1.4}}
           >
             Gluten Free
           </Button>
@@ -124,7 +126,7 @@ function App() {
               color: filterHighRating ? "black" : "white",
             }}
             onClick={() => setFilterHighRating(!filterHighRating)}
-            sx={{border: 1}}
+            sx={{border: 1, mx: 1.4}}
           >
             Vegan
           </Button>
@@ -220,7 +222,7 @@ function App() {
 </FormControl>
 
           {/* <Button sx={{color:'red'}} onClick={resetFilters}>Remove Filters</Button> */}
-          <Button sx={{color:'red', border: 1}} onClick={resetSort}>Reset Sort</Button>
+          <Button sx={{color:'red', border: 1, mx: 1.4}} onClick={resetAll}>Reset All</Button>
           <IconButton color="inherit" onClick={toggleCart}>
             <Badge badgeContent={totalItemsInCart} color="secondary">
               <ShoppingCartIcon />

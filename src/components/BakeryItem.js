@@ -56,7 +56,7 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
-        <DialogTitle id="dialog-title">{name}</DialogTitle>
+        <DialogTitle id="dialog-title"><b>{name}</b></DialogTitle>
         <DialogContent>
           <DialogContentText id="dialog-description">
             <b>Allergens:</b> {allergens}
