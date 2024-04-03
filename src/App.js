@@ -225,7 +225,7 @@ function App() {
           <Button sx={{color:'red', border: 1, mx: 1.4}} onClick={resetAll}>Reset All</Button>
           <IconButton color="inherit" onClick={toggleCart} alt={`View Cart`} aria-hidden="false">
             <Badge badgeContent={totalItemsInCart} color="secondary">
-              <ShoppingCartIcon />
+              <ShoppingCartIcon alt={`View Cart`} aria-hidden="false"/>
             </Badge>
           </IconButton>
         </Toolbar>
