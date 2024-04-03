@@ -158,17 +158,17 @@ function App() {
               '.MuiSvgIcon-root': { color: 'white' }, // Icon color
             }}>
             <InputLabel id="sort-by-label" sx={{ "&.Mui-focused": { color: 'white' } }}>Sort By</InputLabel>
-  <Select
-    labelId="sort-by-label"
-    id="sort-by-select"
-    value={sortBy}
-    label="Sort By" // Ensure this matches the text of the corresponding InputLabel
-    onChange={(e) => setSortBy(e.target.value)}
-  >
-    <MenuItem value="name">Name</MenuItem>
-    <MenuItem value="price">Price</MenuItem>
-    <MenuItem value="rating">Rating</MenuItem>
-  </Select>
+            <Select
+              labelId="sort-by-label"
+              id="sort-by-select"
+              value={sortBy}
+              label="Sort By" // Ensure this matches the text of the corresponding InputLabel
+              onChange={(e) => setSortBy(e.target.value)}
+            >
+              <MenuItem value="name">Name</MenuItem>
+              <MenuItem value="price">Price</MenuItem>
+              <MenuItem value="rating">Rating</MenuItem>
+            </Select>
           </FormControl>
 
           <FormControl 

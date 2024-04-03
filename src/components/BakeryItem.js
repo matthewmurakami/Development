@@ -45,7 +45,7 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
         <div>
           <Button sx={{ border: 1}} size="small" onClick={() => addToCart(name, price)}>Add to Cart</Button>
           <IconButton size="small" onClick={handleInfoOpen}>
-            <InfoOutlinedIcon />
+            <InfoOutlinedIcon alt="Item Details"/>
           </IconButton>
         </div>
       </CardActions>
