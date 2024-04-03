@@ -44,8 +44,10 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
         <Typography variant="h6">${price}</Typography>
         <div>
           <Button sx={{ border: 1}} size="small" onClick={() => addToCart(name, price)}>Add to Cart</Button>
-          <IconButton size="small" onClick={handleInfoOpen} alt="test" aria-hidden="false">
-            <InfoOutlinedIcon alt="test" aria-hidden="false"/>
+          
+          {/* Added aria-hidden as false because of a bug where WAVE was being weird with Material ui*/}
+          <IconButton size="small" onClick={handleInfoOpen} alt={`More information about ${name}`} aria-hidden="false"> 
+            <InfoOutlinedIcon alt={`More information about ${name}`} aria-hidden="false"/>
           </IconButton>
         </div>
       </CardActions>
