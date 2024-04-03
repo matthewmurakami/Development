@@ -63,10 +63,10 @@ function App() {
     setTotal(0);
   }
 
-  function resetFilters() {
-    setFilterFeatured(false);
-    setFilterHighRating(false);
-  }
+  // function resetFilters() {
+  //   setFilterFeatured(false);
+  //   setFilterHighRating(false);
+  // }
 
   function resetAll() {
     setSortBy('name');

@@ -44,8 +44,8 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
         <Typography variant="h6">${price}</Typography>
         <div>
           <Button sx={{ border: 1}} size="small" onClick={() => addToCart(name, price)}>Add to Cart</Button>
-          <IconButton size="small" onClick={handleInfoOpen}>
-            <InfoOutlinedIcon alt="information"/>
+          <IconButton size="small" onClick={handleInfoOpen} alt="test">
+            <InfoOutlinedIcon alt="test"/>
           </IconButton>
         </div>
       </CardActions>
