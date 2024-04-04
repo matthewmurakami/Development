@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  IconButton,
+  Container,
+  Grid,
+  Drawer,
+  Badge,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Button,
+} from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import bakeryData from './assets/bakery-data.json';
 import BakeryItem from './components/BakeryItem';
 import Cart from './components/FinalCart';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Drawer from '@mui/material/Drawer';
-import Badge from '@mui/material/Badge';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import Button from '@mui/material/Button';
-import bakeryData from './assets/bakery-data.json';
 import './App.css';
+
 
 function App() {
   const [cart, setCart] = useState({});
@@ -63,11 +66,6 @@ function App() {
     setTotal(0);
   }
 
-  // function resetFilters() {
-  //   setFilterFeatured(false);
-  //   setFilterHighRating(false);
-  // }
-
   function resetAll() {
     setSortBy('name');
     setSortOrder('asc');
@@ -78,7 +76,6 @@ function App() {
   const totalItemsInCart = Object.values(cart).reduce((acc, curr) => acc + curr, 0);
 
   let processedBakeryData = [...bakeryData];
-
   if (filterFeatured) {
     processedBakeryData = processedBakeryData.filter(item => !item.containsGluten);
   }
@@ -103,12 +100,10 @@ function App() {
 
   return (
     <Box sx={{ flexGrow: 1, backgroundColor:"#304728", paddingTop: '64px', paddingBottom: '64px' }}>
-      <AppBar position="fixed">
+      <AppBar position="fixed" sx={{ overflowX: 'auto', backgroundColor:"black" }}>
+
       <Toolbar sx={{ backgroundColor: "black"}}> 
-          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-            <b>GrillSpot</b>
-          </Typography>
-          
+          <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}> <b>GrillSpot</b> </Typography>
           
           <Button
             style={{
@@ -120,6 +115,7 @@ function App() {
           >
             Gluten Free
           </Button>
+
           <Button
             style={{
               backgroundColor: filterHighRating ? "white" : "black",
@@ -152,14 +148,14 @@ function App() {
                 },
                 color: 'white', // Input text color
                 '&.Mui-focused': {
-                  color: 'white', // Ensure text remains white when focused
+                  color: 'white', // text remains white when focused
                 },
               },
               '.MuiSvgIcon-root': { color: 'white' }, // Icon color
             }}>
 
             <InputLabel 
-              id="sort-by-button" 
+              id="sort-by-label" 
               sx={{ "&.Mui-focused": { color: 'white' } }} 
               label="Sort By" 
               aria-hidden="false"
@@ -168,10 +164,10 @@ function App() {
             </InputLabel>
 
             <Select
-              labelId="sort-by-button"
+              labelId="sort-by-label"
               id="sort-by-select"
               value={sortBy}
-              label="Sort By" // Ensure this matches the text of the corresponding InputLabel
+              label="Sort By"
               onChange={(e) => setSortBy(e.target.value)}
               alt="Sort By" aria-hidden="false"
             >
@@ -194,30 +190,32 @@ function App() {
               '& .Mui-focused .MuiInputLabel-root': {color: 'white',}
             }}
           >
-            
-  <InputLabel id="sort-order-label">Order</InputLabel>
-  <Select
-    labelId="sort-order-label"
-    id="sort-order-select"
-    value={sortOrder}
-    label="Order"
-    onChange={(e) => setSortOrder(e.target.value)}
-  >
-    <MenuItem value="asc">Ascending</MenuItem>
-    <MenuItem value="desc">Descending</MenuItem>
-  </Select>
-</FormControl>
+    
+            <InputLabel id="sort-order-label">Order</InputLabel>
+            <Select
+              labelId="sort-order-label"
+              id="sort-order-select"
+              value={sortOrder}
+              label="Order"
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <MenuItem value="asc">Ascending</MenuItem>
+              <MenuItem value="desc">Descending</MenuItem>
+            </Select>
+          </FormControl>
 
-          {/* <Button sx={{color:'red'}} onClick={resetFilters}>Remove Filters</Button> */}
           <Button sx={{color:'red', border: 1, mx: 1.4}} onClick={resetAll}>Reset All</Button>
+
           <IconButton color="inherit" onClick={toggleCart} alt={`View Cart`} aria-hidden="false">
             <Badge badgeContent={totalItemsInCart} color="secondary">
               <ShoppingCartIcon alt={`View Cart`} aria-hidden="false"/>
             </Badge>
           </IconButton>
+
         </Toolbar>
       </AppBar>
       <Container sx={{ marginTop: 8 }}>
+        
         <Grid container spacing={4}>
           {processedBakeryData.map((item, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>
@@ -235,19 +233,20 @@ function App() {
             </Grid>
           ))}
         </Grid>
-      </Container>
-      <Drawer anchor="right" open={isCartVisible} onClose={toggleCart}>
-  <Box sx={{ width: 350 }} role="presentation">
-    <Cart 
-      cart={cart} 
-      total={total} 
-      resetCart={resetCart} 
-      addToCart={addToCart} 
-      removeFromCart={removeFromCart}
-    />
-  </Box>
-</Drawer>
 
+      </Container>
+
+      <Drawer anchor="right" open={isCartVisible} onClose={toggleCart}>
+        <Box sx={{ width: 350 }} role="presentation">
+          <Cart 
+            cart={cart} 
+            total={total} 
+            resetCart={resetCart} 
+            addToCart={addToCart} 
+            removeFromCart={removeFromCart}
+          />
+        </Box>
+      </Drawer>
     </Box>
   );
 }

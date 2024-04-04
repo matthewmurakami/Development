@@ -58,7 +58,10 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
         aria-labelledby="dialog-title"
         aria-describedby="dialog-description"
       >
-        <DialogTitle id="dialog-title"><b>{name}</b></DialogTitle>
+        <DialogTitle id="dialog-title">
+          <b>{name}</b>
+        </DialogTitle>
+
         <DialogContent>
           <DialogContentText id="dialog-description">
             <b>Allergens:</b> {allergens}
@@ -66,7 +69,6 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
           <DialogContentText id="dialog-description">
             <b>Ingredients:</b> {ingredients}
           </DialogContentText>
-          {/* Add the image here */}
           <CardMedia
             component="img"
             image={NutritionImage}
@@ -79,9 +81,11 @@ const BakeryItem = ({ name, description, price, rating, numReviews, ingredients,
             }}
           />
         </DialogContent>
+
         <DialogActions>
           <Button onClick={handleInfoClose}>Close</Button>
         </DialogActions>
+        
       </Dialog>
     </Card>
   );
