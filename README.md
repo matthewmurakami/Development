@@ -16,4 +16,7 @@ https://development-swart.vercel.app/
 
 
 ### Bugs
-There Are no known bugs.
+When using WebAim WAVE there are bugs that are known with material UI which is what I am using and can be explained with the link below. This applies to the two 'Missing Label' errors.
+
+
+https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
