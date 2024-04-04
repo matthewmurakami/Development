@@ -1,10 +1,10 @@
 # Development
 
 
-###Link to Submission
+### Link to Submission
 
 
-###Follow the instructions below to run locally:
+### Follow the instructions below to run locally:
 
 1) Start to copy the stencil by clicking the green **"Use this template"** button above.
 
