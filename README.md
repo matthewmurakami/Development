@@ -1,7 +1,7 @@
 # Development
 
 
-### Link to Submission
+### Link to Submission Page
 https://development-swart.vercel.app/
 
 ### Follow the instructions below to run locally:
@@ -16,7 +16,7 @@ https://development-swart.vercel.app/
 
 
 ### Bugs
-When using WebAim WAVE there are bugs that are known with material UI which is what I am using and can be explained with the link below. This applies to the two 'Missing Label' errors.
+When using WebAim WAVE there are bugs that are known with material UI which is what I am using and can be explained with the link below. This applies to the two 'Missing Label' errors and was confirmed during office hours.
 
 
 https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label
