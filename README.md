@@ -2,8 +2,7 @@
 
 
 ### Link to Submission Page
-[https://development-swart.vercel.app/
-](https://matthewmurakami.github.io/development-submission/)
+https://matthewmurakami.github.io/development-submission/
 ### Follow the instructions below to run locally:
 
 1) Download the repo either as zip or by using GitHub Desktop
